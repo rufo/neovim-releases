@@ -20,7 +20,7 @@ env:
 # Build with zig cc so we can target glibc 2.17, so we have broader compatibility
 jobs:
   linux:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04-arm
     outputs:
       version: ${{ steps.build.outputs.version }}
     env:
@@ -102,7 +102,7 @@ jobs:
 
   publish:
     needs: [linux]
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04-arm
     env:
       GH_REPO: ${{ github.repository }}
       GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
