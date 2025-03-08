@@ -81,16 +81,16 @@ jobs:
         with:
           name: appimage
           path: |
-            build/bin/nvim-linux-x86_64.appimage
-            build/bin/nvim-linux-x86_64.appimage.zsync
+            build/bin/nvim-linux-arm64.appimage
+            build/bin/nvim-linux-arm64.appimage.zsync
           retention-days: 1
 
       - uses: actions/upload-artifact@v4
         with:
           name: nvim-linux64
           path: |
-            build/nvim-linux-x86_64.tar.gz
-            build/nvim-linux-x86_64.deb
+            build/nvim-linux-arm64.tar.gz
+            build/nvim-linux-arm64.deb
           retention-days: 1
 
       - name: Export version
